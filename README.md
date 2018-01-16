@@ -12,7 +12,7 @@ Download and extract the source into your `node_modules` library. Then `react-na
 
 **Note:** This is only for Android, for iOS you'll want to use [PushNotificationIOS](https://facebook.github.io/react-native/docs/pushnotificationios.html).
 
-```
+```javascript
 import { Platform, PushNotificationIOS } from 'react-native'
 import LocalNotification from 'react-native-ln'
 
