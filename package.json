@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Sebastian Bengtegård"
+  },
+  "bugs": {
+    "url": "https://github.com/trumtomte/react-native-ln/issues"
+  },
+  "description": "React Native Local notifications for Android",
+  "peerDependencies": {
+    "react-native": ">=0.40.0"
+  },
+  "homepage": "https://github.com/trumtomte/react-native-ln",
+  "keywords": ["React-Native", "ios", "android"],
+  "license": "MIT",
+  "name": "react-native-ln",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trumtomte/react-native-ln.git"
+  },
+  "version": "1.0.0"
+}
