@@ -81,3 +81,23 @@ if (Platform.os === 'ios') {
 ```
 
 For more usage visit [react-native-fcm](https://github.com/evollu/react-native-fcm).
+
+Edit `AndroidManifest.xml`
+
+```diff
+  <uses-permission android:name="android.permission.INTERNET" />
+  + <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  + <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+    +   <receiver android:name="com.trumtomte.react.ln.LNLocalMessagingPublisher"/>
+    +   <receiver android:enabled="true" android:exported="true"  android:name="com.trumtomte.react.ln.LNSystemBootEventReceiver">
+    +       <intent-filter>
+    +           <action android:name="android.intent.action.BOOT_COMPLETED"/>
+    +           <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+    +           <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+    +           <category android:name="android.intent.category.DEFAULT" />
+    +       </intent-filter>
+    +   </receiver>
+  </application>
+```
